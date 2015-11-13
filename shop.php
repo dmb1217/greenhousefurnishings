@@ -5,6 +5,7 @@
 
   $action = isset($_GET['action']) ? $_GET['action'] : "";
   $product_id = isset($_GET['product_id']) ? $_GET['product_id'] : "1";
+  $filter=isset($_GET['filter']) ? $_GET['filter'] : "1";
   $name = isset($_GET['name']) ? $_GET['name'] : "";
   if($action=='added'){
     echo "<div class='alert alert-info'>";
@@ -35,7 +36,12 @@
 	    						  FROM products
 	    						  WHERE type = '".$_GET['type']."'";
 	    $select_products_result = $mysqli->query($select_products_query);
-
+	}
+	else if (isset($_GET['filter'])) {
+		$select_products_query = "SELECT * from `products` where match (description, type, collection, name) 
+								  against ('".$_GET['filter']."' IN NATURAL LANGUAGE MODE)";
+	    $select_products_result = $mysqli->query($select_products_query);
+	
 	} else {
 		$select_products_query = "SELECT *
 								  FROM products
@@ -92,6 +98,8 @@
 								print($_GET['collection']." ".$_GET['type']."s");
 							} else if (isset($_GET['collection'])) {
 								print($_GET['collection']." Furniture");
+							} else if (isset($_GET['filter'])){
+								print("Results for '".$_GET['filter']."'");
 							} else {
 								print("Featured Collection");
 							}
