@@ -193,7 +193,7 @@
                                         print("<span class=\"error\">*required</span>");
                                     }
                                 ?>
-                                <input type="email" placeholder="Email" name="new_email" id="new_email" value="<?php echo $_POST['new_email'] ?>" />
+                                <input type="email" placeholder="Email" name="new_email" id="new_email" value="<?php if(isset($_POST['new_email'])) echo $_POST['new_email']; ?>" />
                                 <?php
                                     if ($email_exists == true) {
                                         print("<span class=\"error\">Email is already in use!</span><br>");
@@ -206,7 +206,7 @@
                                         print("<span class=\"error\">*required</span>");
                                     }
                                 ?>
-                                <input type="text" placeholder="New Username" name="new_username" id="new_username" value="<?php echo $_POST['new_username'] ?>" />
+                                <input type="text" placeholder="New Username" name="new_username" id="new_username" value="<?php if(isset($_POST['new_username'])) echo $_POST['new_username']; ?>" />
                                 <?php
                                     if ($username_exists == true) {
                                         print("<span class=\"error\">Username is already in use!</span><br>");
