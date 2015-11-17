@@ -9,124 +9,124 @@
                 if($row["feature"]) $feature = "checked"; else $feature = "false";
                 echo '
                 <form action="#" id="edit-form" role="form">
-                	<div class="form-group">
-                		<div class="row">
-                			<div class="col-sm-6">
-                				<label for="sku">SKU: </label>
-                				<input type="number" class="form-control" id="sku" value="'.$row["sku"].'">
-                			</div>
-                			<div class="col-sm-6">
-                				<label for="price">Price: </label>
-                				<label class="sr-only" for="price">Amount (in dollars)</label>
-                			    <div class="input-group">
-                			      <div class="input-group-addon">$</div>
-                			      <input type="number" class="form-control" id="price" placeholder="Amount" value="'.$row["price"].'">
-                			      </div>
-                			</div>
-                		</div>
-                		<hr>
-                		<div class="row">
-                			<div class="col-sm-12">
-                				<label for="name">Name: </label>
-                				<input type="text" class="form-control" id="name" value="'.$row["name"].'">
-                			</div>
-                		</div>
-                		<hr>
-                		<div class="row">
-                			<div class="col-sm-12">
-                				<label for="description">Description: </label>
-                				<textarea class="form-control" rows="5" id="description">'.$row["description"].'</textarea>
-                			</div>
-                		</div>
-                		<hr>
-                		<div class="row">
-                			<div class="col-sm-6">
-                				<label for="type">Type:</label>
-                			  	<select class="form-control" id="type">
-                			  	  <option value="bookcase">Bookcase</option>
-                			  	  <option value="chair">Chair</option>
-                				  <option value="dresser">Dresser</option>
-                			 	  <option value="lamp">Lamp</option>
-                			 	  <option value="sofa">Sofa</option>
-                			 	  <option value="table">Table</option>
-                				</select>
-                			</div>
-                			<div class="col-sm-6">
-                				<label for="collection">Collection:</label>
-                			  	<select class="form-control" id="collection">
-                			  	  <option vale="Rustic">Rustic</option>
-                			  	  <option value="Modern">Modern</option>
-                				  <option value="Vintage">Vintage</option>
-                				</select>
-                			</div>
-                		</div>
-                		<hr>
-                		<div class="row">
-                			<div class="col-sm-3">
-                				<label for="width">Width (In.): </label>
-                				<input type="number" class="form-control" id="width" value="'.$row["width"].'">
-                			</div>
-                			<div class="col-sm-3">
-                				<label for="height">Height (In.): </label>
-                				<input type="number" class="form-control" id="height" value="'.$row["height"].'">
-                			</div>
-                			<div class="col-sm-3">
-                				<label for="depth">Depth (In.): </label>
-                				<input type="number" class="form-control" id="depth" value="'.$row["depth"].'">
-                			</div>
-                			<div class="col-sm-3">
-                				<label for="weight">Weight (Lbs.): </label>
-                				<input type="number" class="form-control" id="weight" value="'.$row["height"].'">
-            			</div>
-            	    	</div>
-                		<div class="row">
-                			<div class="col-sm-6">
-                				<label for="stock">Stock: </label>
-                				<input type="number" class="form-control" id="stock" value="'.$row["stock"].'">
-                			</div>
-                			<div class="col-sm-6">
-                				<label for="cost">Cost: </label>
-                				<label class="sr-only" for="cost">Amount (in dollars)</label>
-                			    <div class="input-group">
-                			      <div class="input-group-addon">$</div>
-                			      <input type="number" class="form-control" id="cost" placeholder="Amount" value="'.$row["cost"].'">
-                			    </div>
-                			</div>
-                		</div>
-                		<div class="row">
-                			<div class="col-sm-6">
-                				<label for="image">Full-Size Image:</label>
-                				<div class="input-group">
-                	                <span class="input-group-btn">
-                	                    <span class="btn btn-primary btn-file">
-                	                        Browse&hellip; <input type="file" id="imageFS" onchange="StoreFile(this)">
-                	                    </span>
-                	                </span>
-                	                <input type="text" class="form-control" readonly>
-                	            </div>
-                			</div>
-                			<div class="col-sm-6">
-                				<label for="image">Thumbnail Image:</label>
-                				<div class="input-group">
-                	                <span class="input-group-btn">
-                	                    <span class="btn btn-primary btn-file">
-                	                        Browse&hellip; <input type="file" id="imageTN" onchange="StoreFile(this)">
-                	                    </span>
-                	                </span>
-                	                <input type="text" class="form-control" readonly>
-                	            </div>
-                			</div>
-                		</div>
-                		<div class="row">
-                		<br/>
-                		    <div class="col-sm-1">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <label for="sku">SKU: </label>
+                        <input type="number" class="form-control" id="sku" value="'.$row["sku"].'">
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="price">Price: </label>
+                        <label class="sr-only" for="price">Amount (in dollars)</label>
+                          <div class="input-group">
+                            <div class="input-group-addon">$</div>
+                            <input type="number" class="form-control" id="price" placeholder="Amount" value="'.$row["price"].'">
+                            </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <label for="name">Name: </label>
+                        <input type="text" class="form-control" id="name" value="'.$row["name"].'">
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <label for="description">Description: </label>
+                        <textarea class="form-control" rows="5" id="description">'.$row["description"].'</textarea>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <label for="type">Type:</label>
+                          <select class="form-control" id="type">
+                            <option value="bookcase">Bookcase</option>
+                            <option value="chair">Chair</option>
+                          <option value="dresser">Dresser</option>
+                          <option value="lamp">Lamp</option>
+                          <option value="sofa">Sofa</option>
+                          <option value="table">Table</option>
+                        </select>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="collection">Collection:</label>
+                          <select class="form-control" id="collection">
+                            <option vale="Rustic">Rustic</option>
+                            <option value="Modern">Modern</option>
+                          <option value="Vintage">Vintage</option>
+                        </select>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <label for="width">Width (In.): </label>
+                        <input type="number" class="form-control" id="width" value="'.$row["width"].'">
+                      </div>
+                      <div class="col-sm-3">
+                        <label for="height">Height (In.): </label>
+                        <input type="number" class="form-control" id="height" value="'.$row["height"].'">
+                      </div>
+                      <div class="col-sm-3">
+                        <label for="depth">Depth (In.): </label>
+                        <input type="number" class="form-control" id="depth" value="'.$row["depth"].'">
+                      </div>
+                      <div class="col-sm-3">
+                        <label for="weight">Weight (Lbs.): </label>
+                        <input type="number" class="form-control" id="weight" value="'.$row["height"].'">
+                  </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <label for="stock">Stock: </label>
+                        <input type="number" class="form-control" id="stock" value="'.$row["stock"].'">
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="cost">Cost: </label>
+                        <label class="sr-only" for="cost">Amount (in dollars)</label>
+                          <div class="input-group">
+                            <div class="input-group-addon">$</div>
+                            <input type="number" class="form-control" id="cost" placeholder="Amount" value="'.$row["cost"].'">
+                          </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <label for="image">Full-Size Image:</label>
+                        <div class="input-group">
+                                  <span class="input-group-btn">
+                                      <span class="btn btn-primary btn-file">
+                                          Browse&hellip; <input type="file" id="imageFS" onchange="StoreFile(this)">
+                                      </span>
+                                  </span>
+                                  <input type="text" class="form-control" readonly>
+                              </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="image">Thumbnail Image:</label>
+                        <div class="input-group">
+                                  <span class="input-group-btn">
+                                      <span class="btn btn-primary btn-file">
+                                          Browse&hellip; <input type="file" id="imageTN" onchange="StoreFile(this)">
+                                      </span>
+                                  </span>
+                                  <input type="text" class="form-control" readonly>
+                              </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                    <br/>
+                        <div class="col-sm-1">
                               <input type="checkbox" ' . $feature .' id="feature">
-                		    </div>
-                		    <div class="col-sm-5">
-                		        <label for="feature" id="featurelbl">Featured Item</label>
-                		    </div>
-                		</div>
-                	</div>
+                        </div>
+                        <div class="col-sm-5">
+                            <label for="feature" id="featurelbl">Featured Item</label>
+                        </div>
+                    </div>
+                  </div>
                 </form>
                 <span id="productID_'.$row["productID"].'"></span>
                 ';
@@ -135,115 +135,115 @@
         else if($_GET["param"] == "new"){
             echo '
             <form action="#" id="add-form" role="form">
-            	<div class="form-group">
-            		<div class="row">
-            			<div class="col-sm-6">
-            				<label for="sku">SKU: </label>
-            				<input type="number" class="form-control" id="sku">
-            			</div>
-            			<div class="col-sm-6">
-            				<label for="price">Price: </label>
-            				<label class="sr-only" for="price">Amount (in dollars)</label>
-            			    <div class="input-group">
-            			      <div class="input-group-addon">$</div>
-            			      <input type="number" class="form-control" id="price" placeholder="Amount">
-            			      </div>
-            			</div>
-            		</div>
-            		<hr>
-            		<div class="row">
-            			<div class="col-sm-12">
-            				<label for="name">Name: </label>
-            				<input type="text" class="form-control" id="name">
-            			</div>
-            		</div>
-            		<hr>
-            		<div class="row">
-            			<div class="col-sm-12">
-            				<label for="description">Description: </label>
-            				<textarea class="form-control" rows="5" id="description"></textarea>
-            			</div>
-            		</div>
-            		<hr>
-            		<div class="row">
-            			<div class="col-sm-6">
-            				<label for="type">Type:</label>
-            			  	<select class="form-control" id="type">
-            			  	  <option value="bookcase">Bookcase</option>
-            			  	  <option value="chair">Chair</option>
-            				  <option value="dresser">Dresser</option>
-            			 	  <option value="lamp">Lamp</option>
-            			 	  <option value="sofa">Sofa</option>
-            			 	  <option value="table">Table</option>
-            				</select>
-            			</div>
-            			<div class="col-sm-6">
-            				<label for="collection">Collection:</label>
-            			  	<select class="form-control" id="collection">
-            			  	  <option vale="Rustic">Rustic</option>
-            			  	  <option value="Modern">Modern</option>
-            				  <option value="Vintage">Vintage</option>
-            				</select>
-            			</div>
-            		</div>
-            		<hr>
-            		<div class="row">
-            			<div class="col-sm-3">
-            				<label for="width">Width (In.): </label>
-            				<input type="number" class="form-control" id="width">
-            			</div>
-            			<div class="col-sm-3">
-            				<label for="height">Height (In.): </label>
-            				<input type="number" class="form-control" id="height">
-            			</div>
-            			<div class="col-sm-3">
-            				<label for="depth">Depth (In.): </label>
-            				<input type="number" class="form-control" id="depth">
-            			</div>
-            			<div class="col-sm-3">
-            				<label for="weight">Weight (Lbs.): </label>
-            				<input type="number" class="form-control" id="weight">
-            			</div>
-            		</div>
-            		<div class="row">
-            			<div class="col-sm-6">
-            				<label for="stock">Stock: </label>
-            				<input type="number" class="form-control" id="stock">
-            			</div>
-            			<div class="col-sm-6">
-            				<label for="cost">Cost: </label>
-            				<label class="sr-only" for="cost">Amount (in dollars)</label>
-            			    <div class="input-group">
-            			      <div class="input-group-addon">$</div>
-            			      <input type="number" class="form-control" id="cost" placeholder="Amount">
-            			    </div>
-            			</div>
-            		</div>
-            		<div class="row">
-            			<div class="col-sm-6">
-            				<label for="image">Full-Size Image:</label>
-            				<div class="input-group">
-            	                <span class="input-group-btn">
-            	                    <span class="btn btn-primary btn-file">
-            	                        Browse&hellip; <input type="file" id="imageFS" onchange="StoreFile(this)">
-            	                    </span>
-            	                </span>
-            	                <input type="text" class="form-control" readonly>
-            	            </div>
-            			</div>
-            			<div class="col-sm-6">
-            				<label for="image">Thumbnail Image:</label>
-            				<div class="input-group">
-            	                <span class="input-group-btn">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label for="sku">SKU: </label>
+                    <input type="number" class="form-control" id="sku">
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="price">Price: </label>
+                    <label class="sr-only" for="price">Amount (in dollars)</label>
+                      <div class="input-group">
+                        <div class="input-group-addon">$</div>
+                        <input type="number" class="form-control" id="price" placeholder="Amount">
+                        </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <label for="name">Name: </label>
+                    <input type="text" class="form-control" id="name">
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <label for="description">Description: </label>
+                    <textarea class="form-control" rows="5" id="description"></textarea>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label for="type">Type:</label>
+                      <select class="form-control" id="type">
+                        <option value="bookcase">Bookcase</option>
+                        <option value="chair">Chair</option>
+                      <option value="dresser">Dresser</option>
+                      <option value="lamp">Lamp</option>
+                      <option value="sofa">Sofa</option>
+                      <option value="table">Table</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="collection">Collection:</label>
+                      <select class="form-control" id="collection">
+                        <option vale="Rustic">Rustic</option>
+                        <option value="Modern">Modern</option>
+                      <option value="Vintage">Vintage</option>
+                    </select>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <label for="width">Width (In.): </label>
+                    <input type="number" class="form-control" id="width">
+                  </div>
+                  <div class="col-sm-3">
+                    <label for="height">Height (In.): </label>
+                    <input type="number" class="form-control" id="height">
+                  </div>
+                  <div class="col-sm-3">
+                    <label for="depth">Depth (In.): </label>
+                    <input type="number" class="form-control" id="depth">
+                  </div>
+                  <div class="col-sm-3">
+                    <label for="weight">Weight (Lbs.): </label>
+                    <input type="number" class="form-control" id="weight">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label for="stock">Stock: </label>
+                    <input type="number" class="form-control" id="stock">
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="cost">Cost: </label>
+                    <label class="sr-only" for="cost">Amount (in dollars)</label>
+                      <div class="input-group">
+                        <div class="input-group-addon">$</div>
+                        <input type="number" class="form-control" id="cost" placeholder="Amount">
+                      </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label for="image">Full-Size Image:</label>
+                    <div class="input-group">
+                              <span class="input-group-btn">
+                                  <span class="btn btn-primary btn-file">
+                                      Browse&hellip; <input type="file" id="imageFS" onchange="StoreFile(this)">
+                                  </span>
+                              </span>
+                              <input type="text" class="form-control" readonly>
+                          </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="image">Thumbnail Image:</label>
+                    <div class="input-group">
+                              <span class="input-group-btn">
                                     <span class="btn btn-primary btn-file">
                                         Browse&hellip; <input type="file" id="imageTN" onchange="StoreFile(this)">
                                     </span>
                                 </span>
                                 <input type="text" class="form-control" readonly>
-            	            </div>
-            			</div>
-            		</div>
-            	</div>
+                          </div>
+                  </div>
+                </div>
+              </div>
             </form>
             ';
          } 
@@ -259,44 +259,44 @@
             while($row = mysqli_fetch_array($result)){
                 echo '
                 <form action="#" id="user-edit-form" role="form">
-                	<div class="form-group">
-                		<div class="row">
-                			<div class="col-sm-6">
-                				<label for="fName">First Name: </label>
-                				<input type="text" class="form-control" id="fName" value="'.$row["fName"].'">
-                			</div>
-                			<div class="col-sm-6">
-                				<label for="lName">Last Name: </label>
-                				<input type="text" class="form-control" id="lName" value="'.$row["lName"].'">
-                			</div>
-                		</div>
-                		<hr>
-                		<div class="row">
-                			<div class="col-sm-6">
-                				<label for="e-mail">Email: </label>
-                				<input type="email" class="form-control" id="e-mail" value="'.$row["email"].'">
-                			</div>
-                			<div class="col-sm-6">
-                				<label for="access">Type:</label>
-                			  	<select class="form-control" id="access">
-                			  	  <option value="administrative">Admin</option>
-                			  	  <option value="privileged">Privileged</option>
-                				  <option value="user">Standard User</option>
-                				</select>
-                			</div>
-                		</div>
-                		<hr>
-                		<div class="row">
-                			<div class="col-sm-6">
-                				<label for="username">Username: </label>
-                				<input type="text" class="form-control" id="new-username" value="'.$row["username"].'">
-                			</div>
-                			<div class="col-sm-6">
-                				<label for="password">New Password: </label>
-                				<input type="password" class="form-control" id="password">
-                			</div>
-                		</div>
-                	</div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <label for="fName">First Name: </label>
+                        <input type="text" class="form-control" id="fName" value="'.$row["fName"].'">
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="lName">Last Name: </label>
+                        <input type="text" class="form-control" id="lName" value="'.$row["lName"].'">
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <label for="e-mail">Email: </label>
+                        <input type="email" class="form-control" id="e-mail" value="'.$row["email"].'">
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="access">Type:</label>
+                          <select class="form-control" id="access">
+                            <option value="administrative">Admin</option>
+                            <option value="privileged">Privileged</option>
+                          <option value="user">Standard User</option>
+                        </select>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <label for="username">Username: </label>
+                        <input type="text" class="form-control" id="new-username" value="'.$row["username"].'">
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="password">New Password: </label>
+                        <input type="password" class="form-control" id="password">
+                      </div>
+                    </div>
+                  </div>
                 </form>
                 <span id="old-username_'.$row["username"].'"></span>
                 ';
@@ -305,44 +305,44 @@
         else if($_GET["user_param"]=="new"){
             echo '
             <form action="#" id="user-edit-form" role="form">
-                	<div class="form-group">
-                		<div class="row">
-                			<div class="col-sm-6">
-                				<label for="fName">First Name: </label>
-                				<input type="text" class="form-control" id="fName">
-                			</div>
-                			<div class="col-sm-6">
-                				<label for="lName">Last Name: </label>
-                				<input type="text" class="form-control" id="lName">
-                			</div>
-                		</div>
-                		<hr>
-                		<div class="row">
-                			<div class="col-sm-6">
-                				<label for="e-mail">Email: </label>
-                				<input type="email" class="form-control" id="e-mail">
-                			</div>
-                			<div class="col-sm-6">
-                				<label for="access">Type:</label>
-                			  	<select class="form-control" id="access">
-                			  	  <option value="administrative">Admin</option>
-                			  	  <option value="privileged">Privileged</option>
-                				  <option value="user">Standard User</option>
-                				</select>
-                			</div>
-                		</div>
-                		<hr>
-                		<div class="row">
-                			<div class="col-sm-6">
-                				<label for="username">Username: </label>
-                				<input type="text" class="form-control" id="new-username">
-                			</div>
-                			<div class="col-sm-6">
-                				<label for="password">Password:</label>
-                				<input type="password" class="form-control" id="password">
-                			</div>
-                		</div>
-                	</div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <label for="fName">First Name: </label>
+                        <input type="text" class="form-control" id="fName">
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="lName">Last Name: </label>
+                        <input type="text" class="form-control" id="lName">
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <label for="e-mail">Email: </label>
+                        <input type="email" class="form-control" id="e-mail">
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="access">Type:</label>
+                          <select class="form-control" id="access">
+                            <option value="administrative">Admin</option>
+                            <option value="privileged">Privileged</option>
+                          <option value="user">Standard User</option>
+                        </select>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <label for="username">Username: </label>
+                        <input type="text" class="form-control" id="new-username">
+                      </div>
+                      <div class="col-sm-6">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password">
+                      </div>
+                    </div>
+                  </div>
                 </form>
             ';
         }
