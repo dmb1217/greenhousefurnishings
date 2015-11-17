@@ -36,119 +36,119 @@
   $result_collections = $mysqli->query($select_collections);
 ?>
 <body>
-  <?php include("header.php"); ?>
-  
-  <?php
-    if(isset($_SESSION["logged_in"])){
-      if($_SESSION["logged_in_user_access"] == "administrative") 
-        $auth = "a";
-      else if($_SESSION["logged_in_user_access"] == "privileged")
-        $auth = "p";
-      else
-        $auth = "u";
-    }
-    else
-      $auth = "u";
-  if ($auth == "a" || $auth == "p"){ ?>
-  <!-- Edit Product Modal -->
-  <div class="container">
-    <div id="edit-product" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-    
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Edit Product</h4>
-          </div>
-          <div class="modal-body" id="edit-product-modal">
-          <!-- content here is generated through an AJAX callback using AdminCRUD.php-->
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger pull-left" onclick="DeleteProduct()">Delete</button>
-            <button type="submit" class="btn edit-submit submit-btn" id="product_edit">Submit</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-    
-      </div>
-    </div> <!-- end modal -->
-  </div>
-  
-  <!-- Edit User Modal -->
-  <div class="container">
-    <div id="edit-user" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-    
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Edit User</h4>
-          </div>
-          <div class="modal-body" id="edit-user-modal">
-          <!-- content here is generated through an AJAX callback using AdminCRUD.php-->
-          </div>
-          <div class="modal-footer">
-            <button type="button" id="user-delete" class="btn btn-danger pull-left" onclick="DeleteUser()">Delete</button>
-            <button type="submit" id="user-edit" class="btn edit-submit submit-btn">Submit</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-    
-      </div>
-    </div> <!-- end modal -->
-  </div>
-  
-  <!-- New Product Modal -->
-  <div class="container">
-    <div id="new-product" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-    
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">New Product</h4>
-          </div>
-          <div class="modal-body" id="new-product-modal">
-          <!-- content here is generated through an AJAX callback using AdminCRUD.php-->
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn edit-submit submit-btn" id="product_new">Submit</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-    
-      </div>
-    </div> <!-- end modal -->
-  </div>
-  
-  <!-- New User Modal -->
-  <div class="container">
-    <div id="new-user" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-    
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">New User</h4>
-          </div>
-          <div class="modal-body" id="new-user-modal">
-          <!-- content here is generated through an AJAX callback using AdminCRUD.php-->
-          </div>
-          <div class="modal-footer">
-            <button type="submit" id="user-new" class="btn edit-submit submit-btn">Submit</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-    
-      </div>
-    </div> <!-- end modal -->
-  </div>
-  
-  
+	<?php include("header.php"); ?>
+	
+	<?php
+		if(isset($_SESSION["logged_in"])){
+			if($_SESSION["logged_in_user_access"] == "administrative") 
+				$auth = "a";
+			else if($_SESSION["logged_in_user_access"] == "privileged")
+				$auth = "p";
+			else
+				$auth = "u";
+		}
+		else
+			$auth = "u";
+	if ($auth == "a" || $auth == "p"){ ?>
+	<!-- Edit Product Modal -->
+	<div class="container">
+		<div id="edit-product" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Edit Product</h4>
+		      </div>
+		      <div class="modal-body" id="edit-product-modal">
+		      <!-- content here is generated through an AJAX callback using AdminCRUD.php-->
+		      </div>
+		      <div class="modal-footer">
+		      	<button type="button" class="btn btn-danger pull-left" onclick="DeleteProduct()">Delete</button>
+		      	<button type="submit" class="btn edit-submit submit-btn" id="product_edit">Submit</button>
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		
+		  </div>
+		</div> <!-- end modal -->
+	</div>
+	
+	<!-- Edit User Modal -->
+	<div class="container">
+		<div id="edit-user" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Edit User</h4>
+		      </div>
+		      <div class="modal-body" id="edit-user-modal">
+		      <!-- content here is generated through an AJAX callback using AdminCRUD.php-->
+		      </div>
+		      <div class="modal-footer">
+		      	<button type="button" id="user-delete" class="btn btn-danger pull-left" onclick="DeleteUser()">Delete</button>
+		      	<button type="submit" id="user-edit" class="btn edit-submit submit-btn">Submit</button>
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		
+		  </div>
+		</div> <!-- end modal -->
+	</div>
+	
+	<!-- New Product Modal -->
+	<div class="container">
+		<div id="new-product" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">New Product</h4>
+		      </div>
+		      <div class="modal-body" id="new-product-modal">
+		      <!-- content here is generated through an AJAX callback using AdminCRUD.php-->
+		      </div>
+		      <div class="modal-footer">
+		      	<button type="submit" class="btn edit-submit submit-btn" id="product_new">Submit</button>
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		
+		  </div>
+		</div> <!-- end modal -->
+	</div>
+	
+	<!-- New User Modal -->
+	<div class="container">
+		<div id="new-user" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">New User</h4>
+		      </div>
+		      <div class="modal-body" id="new-user-modal">
+		      <!-- content here is generated through an AJAX callback using AdminCRUD.php-->
+		      </div>
+		      <div class="modal-footer">
+		      	<button type="submit" id="user-new" class="btn edit-submit submit-btn">Submit</button>
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		
+		  </div>
+		</div> <!-- end modal -->
+	</div>
+	
+	
 
   <section id="admin-main">
     <div class="container">
